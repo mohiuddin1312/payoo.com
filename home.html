@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payoo Home Page</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body>
+    <main class="flex justify-center">
+      <div
+        class="flex flex-col items-center justify-center w-[450px] h-[932px] bg-orange-200"
+      >
+        <!-- balance amount -->
+        <div class="stats shadow bg-slate-400">
+          <div class="stat">
+            <div class="stat-title font-bold">Total balance</div>
+            <div id="balance" class="stat-value">9400</div>
+          </div>
+        </div>
+        <div class="divider"></div>
+        <!-- button section -->
+        <button id="btn-add-money" class="btn btn-outline btn-primary">
+          Add Money
+        </button>
+        <br />
+        <button id="btn-cash-out" class="btn btn-outline btn-secondary">
+          Cash Out
+        </button>
+
+        <div class="divider"></div>
+        <!-- balance file start -->
+        <fieldset
+          class="fieldset w-xs bg-base-200 border border-base-300 p-4 rounded-box"
+        >
+          <label class="fieldset-label text-xl font-bold">Amount</label>
+          <input id="amount" type="text" class="input" placeholder="Amount" />
+
+          <label class="fieldset-label text-xl font-bold">Pin</label>
+          <input
+            id="pin"
+            type="password"
+            class="input"
+            outocomplete="off"
+            placeholder="Inter 4 disit pin"
+          />
+
+          <button id="btn-addMoney" class="btn btn-neutral mt-4">
+            Add Money
+          </button>
+        </fieldset>
+        <!-- balance file end -->
+        <!-- Cash Out section Start -->
+        <fieldset
+          id="cash-out-file"
+          class="fieldset w-xs bg-base-200 border border-base-300 p-4 rounded-box hidden"
+        >
+          <label class="fieldset-label text-xl font-bold">Amount</label>
+          <input
+            id="cash-out-amount"
+            type="text"
+            class="input"
+            placeholder="Amount"
+          />
+
+          <label class="fieldset-label text-xl font-bold">Pin</label>
+          <input
+            id="cash-out-pin"
+            type="password"
+            class="input"
+            outocomplete="off"
+            placeholder="Inter 4 disit pin"
+          />
+
+          <button id="cash-out" class="btn btn-neutral mt-4">Cash Out</button>
+        </fieldset>
+        <!-- Cash Out section end -->
+      </div>
+      <script src="js/home.js"></script>
+      <script src="js/cash-out.js"></script>
+      <script src="js/feature.js"></script>
+    </main>
+  </body>
+</html>
